@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Design tokens
+   A single source of truth for color, type, spacing and motion.
+   ========================================================================== */
+
+:root {
+  /* ---- Color: base palette (per brief) ---- */
+  --c-black: #0a0a0a;
+  --c-charcoal: #111111;
+  --c-grey: #1a1a1a;
+  --c-grey-2: #2a2a2a;
+  --c-text: #f5f5f5;
+  --c-muted: #9a9a9a;
+  --c-muted-2: #6f6f6f;
+
+  /* ---- Color: accent (subtle midnight blue / dark purple, used sparingly) ---- */
+  --c-accent: #4f5aa8;
+  --c-accent-bright: #7b84cf;
+  --c-accent-dim: #333a66;
+  --c-accent-glow: rgba(79, 90, 168, 0.16);
+  --c-accent-glow-strong: rgba(79, 90, 168, 0.32);
+
+  /* ---- Surfaces ---- */
+  --surface-0: var(--c-black);
+  --surface-1: var(--c-charcoal);
+  --surface-2: var(--c-grey);
+  --border-hairline: 1px solid var(--c-grey-2);
+  --border-hairline-soft: 1px solid rgba(42, 42, 42, 0.7);
+
+  /* ---- Type families ---- */
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* ---- Type scale ---- */
+  --fs-900: clamp(2.75rem, 2rem + 3.2vw, 5rem);
+  --fs-800: clamp(2.1rem, 1.7rem + 1.8vw, 3.25rem);
+  --fs-700: clamp(1.5rem, 1.3rem + 0.9vw, 2.1rem);
+  --fs-600: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+  --fs-500: 1.0625rem;
+  --fs-400: 0.95rem;
+  --fs-300: 0.85rem;
+  --fs-200: 0.75rem;
+
+  /* ---- Spacing scale ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.85rem;
+  --sp-4: 1.25rem;
+  --sp-5: 2rem;
+  --sp-6: 3rem;
+  --sp-7: 4.5rem;
+  --sp-8: 6.5rem;
+  --sp-9: 9rem;
+
+  /* ---- Layout ---- */
+  --content-max: 1180px;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --nav-height: 72px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms;
+  --dur-med: 420ms;
+  --dur-slow: 800ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-med: 0ms;
+    --dur-slow: 0ms;
+  }
+}
